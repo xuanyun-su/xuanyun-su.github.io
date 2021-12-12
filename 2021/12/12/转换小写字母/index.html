@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>在线选举 | suli</title>
+  <title>转换小写字母 | suli</title>
 
   <link rel="icon" type="image/x-icon, image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
@@ -419,21 +419,21 @@
 
 
 <div class="post-detail-header" id="thumbnail_canvas" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;background-image:url('/medias/3.jpg')">
+  background-position: center center;position: relative;background-image:url('/medias/10.jpg')">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        在线选举
+        转换小写字母
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fas fa-calendar"></i> Published in：2021-12-11 |
+          <i class="fas fa-calendar"></i> Published in：2021-12-12 |
         </span>
       
 
@@ -442,11 +442,11 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fas fa-file-text-o"></i> Words: 660 |
+            <i class="fas fa-file-text-o"></i> Words: 246 |
           </span>
   
           <span class="min2read">
-            <i class="fas fa-clock"></i> Reading time: 2min |
+            <i class="fas fa-clock"></i> Reading time: 1min |
           </span>
   
           
@@ -473,27 +473,18 @@
   <div class="main-content">
     <article class="post post-detail">
       <div class="post-content">
-        <h1 id="911-在线选举"><a href="#911-在线选举" class="headerlink" title="911. 在线选举"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/online-election/">911. 在线选举</a></h1><p>给你两个整数数组 persons 和 times 。在选举中，第 i 张票是在时刻为 times[i] 时投给候选人 persons[i] 的。</p>
-<p>对于发生在时刻 t 的每个查询，需要找出在 t 时刻在选举中领先的候选人的编号。</p>
-<p>在 t 时刻投出的选票也将被计入我们的查询之中。在平局的情况下，最近获得投票的候选人将会获胜。</p>
-<p>实现 TopVotedCandidate 类：</p>
-<ul>
-<li>TopVotedCandidate(int[] persons, int[] times) 使用 persons 和 times 数组初始化对象。</li>
-<li>int q(int t) 根据前面描述的规则，返回在时刻 t 在选举中领先的候选人的编号</li>
-</ul>
-<p>示例：</p>
-<blockquote>
-<p>输入：<br>[“TopVotedCandidate”, “q”, “q”, “q”, “q”, “q”, “q”]<br>[[[0, 1, 1, 0, 0, 1, 0], [0, 5, 10, 15, 20, 25, 30]], [3], [12], [25], [15], [24], [8]]<br>输出：<br>[null, 0, 1, 1, 0, 0, 1]</p>
-<p>解释：<br>TopVotedCandidate topVotedCandidate = new TopVotedCandidate([0, 1, 1, 0, 0, 1, 0], [0, 5, 10, 15, 20, 25, 30]);<br>topVotedCandidate.q(3); // 返回 0 ，在时刻 3 ，票数分布为 [0] ，编号为 0 的候选人领先。<br>topVotedCandidate.q(12); // 返回 1 ，在时刻 12 ，票数分布为 [0,1,1] ，编号为 1 的候选人领先。<br>topVotedCandidate.q(25); // 返回 1 ，在时刻 25 ，票数分布为 [0,1,1,0,0,1] ，编号为 1 的候选人领先。（在平&gt;局的情况下，1 是最近获得投票的候选人）。<br>topVotedCandidate.q(15); // 返回 0<br>topVotedCandidate.q(24); // 返回 0<br>topVotedCandidate.q(8); // 返回 1</p>
+        <h4 id="709-转换成小写字母"><a href="#709-转换成小写字母" class="headerlink" title="709. 转换成小写字母"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/to-lower-case/">709. 转换成小写字母</a></h4><blockquote>
+<p>给你一个字符串 <code>s</code> ，将该字符串中的大写字母转换成相同的小写字母，返回新的字符串。</p>
 </blockquote>
+<p>循环直接做，也可以在循环上判断是否是大小写字母在考虑去调用自带的函数</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">toLowerCase</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; s.<span class="built_in">size</span>();i++)&#123;</span><br><span class="line">            s[i] = <span class="built_in">tolower</span>(s[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">// </span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">toLowerCase</span><span class="params">(string s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">auto</span> &amp;a :s)&#123;</span><br><span class="line">            a = <span class="built_in">tolower</span>(a);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
 <blockquote>
-<p>思路</p>
+<p>ASCII码</p>
 </blockquote>
-<ul>
-<li>提前将每个时刻对应的最高的人计算出来，利用一个数组存储，为了方便，设立一个哈希表（因为候选人的数量是不确定的）来存储最高的人，如果选票被超过了更新索引为选票最高的人，平局时注意最新得票的人会成为最厉害的人，所以更新下标时要用大于等于</li>
-<li>利用二分法查找区间，确定选票的情况，确定此时下标，再利用已经计算好的候选人表返回候选人</li>
-</ul>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TopVotedCandidate</span> &#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; rank;</span><br><span class="line">    vector&lt;<span class="keyword">int</span>&gt; timelist; </span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="built_in">TopVotedCandidate</span>(vector&lt;<span class="keyword">int</span>&gt;&amp; persons, vector&lt;<span class="keyword">int</span>&gt;&amp; times) &#123;</span><br><span class="line">        <span class="keyword">int</span> cnt[<span class="number">3</span>];</span><br><span class="line">        <span class="keyword">int</span> maxIndex = <span class="number">3</span>;</span><br><span class="line">        cnt[<span class="number">3</span>] = <span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">this</span>-&gt;timelist = times;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> p:persons)&#123;</span><br><span class="line">            cnt[p]++;</span><br><span class="line">            <span class="keyword">if</span>(cnt[p] &gt;= cnt[maxIndex])&#123;</span><br><span class="line">                maxIndex = p;</span><br><span class="line">            &#125;</span><br><span class="line">            rank.<span class="built_in">emplace_back</span>(maxIndex);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">int</span> <span class="title">q</span><span class="params">(<span class="keyword">int</span> t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> l  = <span class="number">0</span>, r = timelist.<span class="built_in">size</span>()<span class="number">-1</span>;</span><br><span class="line">        <span class="keyword">while</span>(l &lt; r)&#123;</span><br><span class="line">            <span class="keyword">int</span> mid = （l + r + <span class="number">1</span>） &gt;&gt; <span class="number">1</span>;</span><br><span class="line">            <span class="keyword">if</span>(timelist[mid] &lt;= t) l = mid;</span><br><span class="line">            <span class="keyword">else</span> r = mid - <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> timelist[r] &lt;= t ? rank[r] : <span class="number">0</span>;</span><br><span class="line">        <span class="comment">// 下方时stl自带的函数 比较方便</span></span><br><span class="line">        <span class="comment">//int ans = upper_bound(timelist.begin(),timelist.end(),t) - timelist.begin() - 1;</span></span><br><span class="line">        <span class="comment">// return rank[ans];</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your TopVotedCandidate object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * TopVotedCandidate* obj = new TopVotedCandidate(persons, times);</span></span><br><span class="line"><span class="comment"> * int param_1 = obj-&gt;q(t);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p>大小写字母在ASCII码表上差32所以我们只要发现是大写字母直接加上就好了</p>
+<p>看题解发现了个巧妙的东西，大写字母范围的二进制数在对应的32的二进制的位置都是0，所以直接异或32就相当于加上了32。。。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Soultion</span>&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="function">string <span class="title">toLowerCase</span><span class="params">(string s)</span></span>&#123;</span><br><span class="line">		<span class="keyword">for</span>(<span class="keyword">auto</span> &amp; ch: s)&#123;</span><br><span class="line">            <span class="keyword">if</span>(ch &gt; <span class="number">65</span> &amp;&amp; ch &lt;=<span class="number">90</span>)&#123;</span><br><span class="line">                <span class="comment">// ch += 32;</span></span><br><span class="line">                ch |= <span class="number">32</span>；</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 
       </div>
@@ -501,8 +492,8 @@
         
         <div class="tags">
           
-            <a href="/tags/%E4%BA%8C%E5%88%86/" class="">
-              二分
+            <a href="/tags/%E6%A8%A1%E6%8B%9F/" class="">
+              模拟
             </a>
           
         </div>
@@ -516,7 +507,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>link:  </strong>
-    <a href="/2021/12/11/在线选举/" target="_blank" title="在线选举">http://example.com/2021/12/11/在线选举/</a>
+    <a href="/2021/12/12/转换小写字母/" target="_blank" title="转换小写字母">http://example.com/2021/12/12/转换小写字母/</a>
     </li>
     <li class="post-copyright-license">
       <strong>Copyright notice:   </strong>
@@ -534,42 +525,21 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img" style="background-size: cover; 
-      background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/10.jpg" class="lazyload placeholder" data-srcset="/medias/10.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" alt="">
-    </div>
-    <a href="/2021/12/12/%E8%BD%AC%E6%8D%A2%E5%B0%8F%E5%86%99%E5%AD%97%E6%AF%8D/" class="post-nav-link">
-      <div class="title">
-        <i class="fas fa-angle-left"></i> Prev:
-        <div class="title-text">转换小写字母</div>
-      </div>
-      
-      <!-- <div class="content">
-        709. 转换成小写字母
-给你一个字符串 s ，将该字符串中的大写字母转换成相同的小写字母，返回新的字符串。
-
-循环直接
-      </div> -->
-    </a>
-  </div>
-
 
 
   
   <div class="post-nav-next post-nav-item">
     <div class="post-nav-img" style="background-size: cover; 
       background-position: center center;">
-      <img class="lazyload lazyload placeholder" src="/medias/6.jpg" class="lazyload placeholder" data-srcset="/medias/6.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
+      <img class="lazyload lazyload placeholder" src="/medias/3.jpg" class="lazyload placeholder" data-srcset="/medias/3.jpg" srcset="https://img2.baidu.com/it/u=2037979560,2772131037&fm=26&fmt=auto&gp=0.jpg" src="" alt="">
     </div>
-    <a href="/2021/12/10/%E6%9C%80%E7%9F%AD%E8%A1%A5%E5%85%A8%E8%AF%8D/" class="post-nav-link">
+    <a href="/2021/12/11/%E5%9C%A8%E7%BA%BF%E9%80%89%E4%B8%BE/" class="post-nav-link">
       <div class="title">
         Next: <i class="fas fa-angle-right"></i>
-        <div class="title-text">最小补全词</div>
+        <div class="title-text">在线选举</div>
       </div>
       <!-- <div class="content">
-        748. 最短补全词给你一个字符串 licensePlate 和一个字符串数组 words ，请你找出并返回 words
+        911. 在线选举给你两个整数数组 persons 和 times 。在选举中，第 i 张票是在时刻为 times[i]
       </div> -->
     </a>
   </div>
